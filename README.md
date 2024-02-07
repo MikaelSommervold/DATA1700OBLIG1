@@ -1,2 +1,9 @@
-[![Review Assignment Due Date](https://classroom.github.com/assets/deadline-readme-button-24ddc0f5d75046c5622901739e7c5dd533143b0c8e959d652212380cedb1ea36.svg)](https://classroom.github.com/a/c5dQSE64)
-[![Open in Visual Studio Code](https://classroom.github.com/assets/open-in-vscode-718a45dd9cf7e7f842a935f5ebbe5719a5e09af4491e668f4dbf3b35d5cca122.svg)](https://classroom.github.com/online_ide?assignment_repo_id=11643242&assignment_repo_type=AssignmentRepo)
+OsloMet brukernavn: misom1551
+
+GitHub brukernavn: MikaelSommervold
+
+Github repo URL: https://github.com/MikaelSommervold/DATA1700OBLIG1.git
+
+Fullt navn: Mikael Sommervold
+
+Kort beskrivelse av applikasjon (5-10 setninger): Applikasjonen mottar input som settes inn i en klient-side tabell. Alle innputtene må være fylt inn for å kunne submitte de til tabellen. I tillegg har de ulike inputtene krav for hva som er aksepterte input. En film må velges fra dropdown menyen og antall kan ikke være negativt, 0 eller høyere enn 100 (den hypotetiske kinosalen har 100 seter). Navnefeltene har en makslengde på godtatt input, telefonfeltet tar kun imot telefonnummer i format "123 45 678" eller "12345678" og epostfeltet tar kun imot gyldige epostadresser (med @ og domenenavn). En knapp nederst på siden kan trykkes på for å slette alle motatte input.
