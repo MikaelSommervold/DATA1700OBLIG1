@@ -24,11 +24,14 @@ function submitForm() {
 
   // Display the array in a table underneath <h2>Alle Billetter</h2>
   displayTickets();
+
+  // Reset input fields in form for next input
+  document.getElementById("bestilling").reset();
 }
 
 function displayTickets() {
   var ticketsContainer = document.getElementById("ticketsContainer");
-  ticketsContainer.innerHTML = ""; // Clear previous content
+  ticketsContainer.innerHTML = ""; // Prevent duplicate tables
 
   // Create a table to display the tickets
   var ticketTable = document.createElement("table");
