@@ -53,7 +53,7 @@ function displayTickets() {
     var ticket = ticketArray[i];
     var row = ticketTable.insertRow(i + 1);
 
-    // Loop through ticket properties and create cells for each
+    // Loop through ticket properties and create cells for each ticket
     for (var j = 0; j < headers.length; j++) {
       var cell = row.insertCell(j);
       cell.textContent = ticket[headers[j].toLowerCase()];

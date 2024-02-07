@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <title>Kinobilletter</title>
     <style>
-      /* Style for the ticket table */
+      /* Style for the ticket table/table under Alle Billetter */
       .ticket-table {
         border-collapse: collapse;
         width: 100%;
@@ -27,7 +27,9 @@
   </head>
 <body>
     <h1>Bestilling av kinobilletter</h1>
+    <!--Submit form for all input fields-->
 <form id ="bestilling" onsubmit="submitForm(); return false">
+  <!--Dropdown menu for selecting a movie-->
  <label for="film">Velg film:</label>
   <select name="film" id="film" required>
     <option hidden disabled selected value>Velg film her</option>
@@ -43,12 +45,13 @@
     <option value="The Zone of Interest">The Zone of Interest</option>
   </select>
 <br><br>
+<!--All remaining input fields with their own type, required and pattern as well as a error response -->
     <label for="antall">Antall:</label><br>
-    <input type="number" id="antall" name="antall" min="1" max="100" required><br> <!--Kinoens sal har totalt 100 seter de kan selge billetter til og antallet billetter må være større enn null-->
+    <input type="number" id="antall" name="antall" min="1" max="100" required><br> <!--The hypothetical cinema has a total of 100 seats as such the number of tickets that can be ordered at once is less than 100, but more than 0-->
     <label for="fnavn">Fornavn:</label><br>
-    <input type="text" id="fornavn" name="fornavn" min="1" max="50" required><br>
+    <input type="text" id="fornavn" name="fornavn" min="1" max="255" required><br>
     <label for="enavn">Etternavn:</label><br>
-    <input type="text" id="etternavn" name="etternavn" min="1" max="50" required><br>
+    <input type="text" id="etternavn" name="etternavn" min="1" max="255" required><br>
     <label for="tlfnr">Telefonnr:</label><br>
     <input type="tel" id="telefon" name="telefon" pattern="[0-9]{3} [0-9]{2} [0-9]{3}|[0-9]{8}" required title="Vennligst skriv ett gyldig telefon nummer"><br>
     <label for="epost">Epost:</label><br>
@@ -57,10 +60,11 @@
   </form> 
 
   <h2>Alle Billetter</h2>
-  <div id="ticketsContainer"></div>
-
+ 
+  <div id="ticketsContainer"></div> 
+ <!--This is where the table with the input array goes-->
   <button onclick="slettAlle()">Slett alle billettene</button>
-
+<!--Clicking this button executes the slettAlle script, deleting the values in the array-->
   <script src="../javascript/kinobilletter.js"></script>
 
   </body>
