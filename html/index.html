@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Kinobilletter</title>
+    <style>
+      /* Style for the ticket table */
+      .ticket-table {
+        border-collapse: collapse;
+        width: 100%;
+      }
+    
+      /* Style for table header cells */
+      .ticket-table th {
+        border: 1px solid #000000;
+        padding: 8px;
+        text-align: left;
+        background-color: #f2f2f2;
+      }
+    
+      /* Style for table data cells */
+      .ticket-table td {
+        border: 1px solid #000000;
+        padding: 8px;
+      }
+    </style>
+  </head>
+<body>
+    <h1>Bestilling av kinobilletter</h1>
+<form id ="bestilling" onsubmit="submitForm(); return false">
+ <label for="film">Velg film:</label>
+  <select name="film" id="film" required>
+    <option hidden disabled selected value>Velg film her</option>
+    <option value="American Fiction">American Fiction</option>
+    <option value="Anatomy of a Fall">Anatomy of a Fall</option>
+    <option value="Barbie">Barbie</option>
+    <option value="The Holdovers">The Holdovers</option>
+    <option value="Killers of the Flower Moon">Killers of the Flower Moon</option>
+    <option value="Maestro">Maestro</option>
+    <option value="Oppenheimer">Oppenheimer</option>
+    <option value="Past Lives">Past Lives</option>
+    <option value="Poor Things">Poor Things</option>
+    <option value="The Zone of Interest">The Zone of Interest</option>
+  </select>
+<br><br>
+    <label for="antall">Antall:</label><br>
+    <input type="number" id="antall" name="antall" min="1" max="100" required><br> <!--Kinoens sal har totalt 100 seter de kan selge billetter til og antallet billetter må være større enn null-->
+    <label for="fnavn">Fornavn:</label><br>
+    <input type="text" id="fornavn" name="fornavn" min="1" max="50" required><br>
+    <label for="enavn">Etternavn:</label><br>
+    <input type="text" id="etternavn" name="etternavn" min="1" max="50" required><br>
+    <label for="tlfnr">Telefonnr:</label><br>
+    <input type="tel" id="telefon" name="telefon" pattern="[0-9]{3} [0-9]{2} [0-9]{3}|[0-9]{8}" required title="Vennligst skriv ett gyldig telefon nummer"><br>
+    <label for="epost">Epost:</label><br>
+    <input type="email" id="epost" name="epost" required title="Vennligst skriv en gyldig epost addresse"><br><br>
+    <input type="submit" value="Kjøp Billett">
+  </form> 
+
+  <h2>Alle Billetter</h2>
+  <div id="ticketsContainer"></div>
+
+  <button onclick="slettAlle()">Slett alle billettene</button>
+
+  <script src="../javascript/kinobilletter.js"></script>
+
+  </body>
+</html>  
